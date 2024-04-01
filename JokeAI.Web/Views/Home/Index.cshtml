@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Welcome to joke AI app";
+}
+
+<h1>Welcome to joke generator</h1>
+<div class="row">
+    <div class="col-12">
+        <form method="post" class="w-100 row">
+            <div class="col-12 col-md-4">
+                <p>Pick a topic:</p>
+                <input type="radio" required id="tech" name="topic" value="Technology"> <label for="tech">Technology</label> <br />
+                <input type="radio" required name="topic" id="relation" value="Relationships"> <label for="relation">Relationships</label> <br />
+                <input type="radio" required name="topic" id="food" value="Food"> <label for="food">Food</label> <br />
+                <input type="radio" required name="topic" value="Animals" id="animals"> <label for="animals">Animals</label> <br>
+                <input type="radio" required name="topic" value="Travel" id="travel"> <label for="travel">Travel</label>
+            </div>
+            <div class="col-12 col-md-4">
+                <p>Choose a tone:</p>
+                <input type="radio" required name="tone" id="witty" value="Witty"> <label for="witty">Witty</label> <br />
+                <input type="radio" required name="tone" value="Sarcastic" id="sarcastic"> <label for="sarcastic">Sarcastic</label> <br />
+                <input type="radio" required name="tone" value="Silly" id="silly"> <label for="silly">Silly</label> <br />
+                <input type="radio" required name="tone" value="Dark" id="dark"> <label for="dark">Dark</label> <br />
+                <input type="radio" required name="tone" value="Goofy" id="goofy"> <label for="goofy">Goofy</label>
+            </div>
+            <div class="col-12 col-md-4">
+                <p>How it should be?</p>
+                <input type="radio" required name="kind" value="Pun" id="pun"> <label for="pun">Pun</label><br />
+                <input type="radio" required name="kind" value="Knock-knock" id="knok"> <label for="knok">Knock-knock</label> <br />
+                <input type="radio" required name="kind" value="Story" id="story"> <label for="story">Story</label><br />
+                <input type="radio" required name="kind" value="One Liner" id="onel"> <label for="onel">One-liner</label><br />
+                <input type="radio" required name="kind" value="Riddle" id="riddle"> <label for="riddle">Riddle</label>
+            </div>
+            <div class="col-12 text-center">
+                <input type="submit" class="btn btn-primary" value="Generate" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<h3 class="mt-5">The joke</h3>
+<div class="alert alert-success">@ViewData["TokenResult"]</div>
+
+<h3 class="mt-5">What Ai thinks about this joke</h3>
+<div class="alert alert-info">@ViewData["Evaluation"]</div>
